@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "mcp__claude_ai_Google_Drive__search_files",
+      "WebFetch(domain:www.exness.com)",
+      "WebFetch(domain:help.exness.com)",
+      "mcp__claude_ai_Notion__notion-search",
+      "WebFetch(domain:get.exness.help)",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "WebFetch(domain:www.vantagemarkets.com)"
+    ]
+  }
+}
