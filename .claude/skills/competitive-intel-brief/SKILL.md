@@ -37,11 +37,40 @@ Tag each material claim:
 
 ## Step 5 — Output structure
 1. **BLUF** — 2–3 sentences: the answer and why it matters to Vantage.
-2. **Comparison table** — subject vs benchmark(s), one row per dimension, tier tag per cell.
-3. **Gaps & implications for Vantage** — tie to roadmap (e.g. Path A Binance-API vs Path B
+2. **Verification banner** — one line: `N claims checked, X corrected, Y downgraded` (from Step 6).
+   Omit only if Step 6 was skipped, and say so explicitly.
+3. **Comparison table** — subject vs benchmark(s), one row per dimension, tier tag per cell.
+4. **Gaps & implications for Vantage** — tie to roadmap (e.g. Path A Binance-API vs Path B
    StarPrime; CFD/perp launch; oracle/market-maker sourcing). Mark regulatory items `VERIFY`.
-4. **Confidence summary** — what is solid vs thin.
-5. **Open questions & suggested next steps** — including which sources still need pulling.
+5. **Confidence summary** — what is solid vs thin.
+6. **Open questions & suggested next steps** — including which sources still need pulling.
+
+## Step 6 — Adversarial citation verification (STORM pass)
+Run this on any brief that leaves the team (Head of Product, HoP team, cross-functional). For a
+quick internal lookup you may skip it — but then say so in the verification banner. The point is a
+second, *independent* set of eyes that never saw your reasoning, so it judges each claim on the
+source alone. This is where prior "accuracy fell short" feedback gets caught before send.
+
+1. **Select the claims to check.** Every material `Confirmed` claim, plus any `Inferred` claim the
+   brief leans on for a roadmap recommendation. Group related claims into ~4–6 clusters.
+2. **Fan out `general-purpose` subagents in a single message** (one per cluster, so they run in
+   parallel and their research noise stays out of this chat). Each agent prompt:
+
+   > Independently verify a competitive-intelligence claim against the SUBJECT ENTITY's own primary
+   > source. Be skeptical; a third party's page is never evidence about another entity (a Bitget
+   > article is not evidence about Binance). CLAIM: {claim + figure + the entity it concerns}. Find
+   > the entity's official domain / regulatory filing (ADGM-FSRA, FCA, SEC) / published T&C or
+   > product page. Confirm or correct: exact figure/spread/leverage/fee/instrument coverage, and the
+   > as-of date. Return VERDICT = CONFIRMED / PARTIALLY CONFIRMED (list corrections) / UNVERIFIED
+   > (no primary source found) / FALSE, then the corrected one-line claim, then the primary URL.
+   > Under 250 words. Do not cite aggregators, blogs, or forums as proof.
+
+3. **Apply the verdicts back into the tiers:**
+   - `PARTIALLY CONFIRMED` → correct the figure/date in place; keep `Confirmed`, note the correction.
+   - `UNVERIFIED` → downgrade `Confirmed` → `Speculative` (or `Inferred` if reasoned), say what would confirm it.
+   - `FALSE` → remove the claim or replace with the corrected fact; never leave a false claim standing.
+4. **Fill the verification banner** (Step 5, item 2) with the honest tally. If a roadmap implication
+   rested on a claim that got downgraded or corrected, revisit that implication.
 
 ## Pre-send validation checklist
 - [ ] Every `Confirmed` claim links a PRIMARY source for the correct entity.
@@ -49,6 +78,7 @@ Tag each material claim:
 - [ ] Tiers applied; no inference dressed as fact.
 - [ ] Regulatory claims marked `VERIFY` with the document to check.
 - [ ] BLUF answers the Step 1 question directly.
+- [ ] Step 6 verification run (or its absence stated in the banner); no `FALSE` claim left standing.
 
 ## Known failure modes (do not repeat)
 - Substituting a competitor's source for the subject entity.
