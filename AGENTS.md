@@ -33,9 +33,13 @@ Product, Taiwan-based) and coordinate with cross-functional teams (BIT, Risk, Op
 ## Skill index (the agent reads the body only when it decides the skill applies)
 - **competitive-intel-brief** — produce or fact-check competitive intelligence on brokers/
   exchanges (Binance, Bybit, Bitget, Robinhood/Bitstamp, Moomoo) for the Vantage roadmap.
-- **prd-authoring** — draft, upgrade, or gap-analyse a PRD/FSD for a Vantage product.
+- **prd-authoring** — build a complete IDEAL PRD from context (notes, handover, transcripts),
+  OR gap-analyse an existing PRD (gap mode triggered explicitly only).
 - **meeting-synthesis** — turn meeting notes / transcripts into decisions, action items, risks.
+  Contains full Vantage stakeholder map for accurate action-item assignment.
 - **hop-brief** — convert any technical output into a plain-language brief for Karlos / Taiwan.
+- **sop-builder** — turn raw knowledge (Caleb sessions, recordings, scattered notes) into
+  structured SOPs. Priority use: capturing institutional knowledge before it leaves.
 
 ## House rules for working with these skills
 - When a task clearly matches a skill, use it. If two apply, run them in sequence
