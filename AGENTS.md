@@ -40,6 +40,17 @@ Product, Taiwan-based) and coordinate with cross-functional teams (BIT, Risk, Op
 - **hop-brief** — convert any technical output into a plain-language brief for Karlos / Taiwan.
 - **sop-builder** — turn raw knowledge (Caleb sessions, recordings, scattered notes) into
   structured SOPs. Priority use: capturing institutional knowledge before it leaves.
+- **weekly-report** — draft the bilingual Unlimited Leverage weekly report via a self-improving
+  loop (draft → critic → revise) gated on the PM-grade standard. Runs on a Sunday cloud schedule.
+- **pm-quality-gate** — the reusable PM-grade standard + draft→critique→revise loop any deliverable
+  must pass. Add it to the loop when something must "reach top-tier PM standard".
+- **storm-research** — multi-perspective, citation-verified HTML research briefing (5 expert lenses).
+
+## Agent fleet (in `.claude/agents/` — offload heavy/parallel/verification work)
+Delegate to keep this chat clean and tier cost. `pm-researcher` (general web research) · `competitor-analyst`
+(one named competitor, primary-source-first) · `citation-verifier` (Opus — verify one claim vs its primary
+source) · `deliverable-critic` (Opus — score a draft against the pm-quality-gate) · `doc-drafter` (Haiku —
+format/write from material already in hand, no web).
 
 ## House rules for working with these skills
 - When a task clearly matches a skill, use it. If two apply, run them in sequence

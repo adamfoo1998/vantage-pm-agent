@@ -39,7 +39,8 @@ tone and structure of `.claude/reporting/unlimited-leverage-report/templates/Unl
 **三、區域表現 / Regional** — top-5 regions: Volume growth % and Net PnL growth %, each 🔴/🟢. Flag `數據確認中 / data pending` where a figure isn't in yet (do not guess — mirror the Hong Kong rows in past reports).
 
 ## THE STANDARD (the loop's stop condition)
-This is the reusable PM-grade quality bar. The report **passes only when every CRITICAL dimension passes**.
+This is the shared PM-grade quality bar from the **`pm-quality-gate`** skill, plus report-specific
+dimensions (bilingual, template). The report **passes only when every CRITICAL dimension passes**.
 A number-correct report that reads flat FAILS — that is the whole point of this skill.
 
 | # | Dimension | Critical? | Passes when… |
@@ -62,14 +63,11 @@ that's a pricing signal, not a demand signal." Every interesting number should o
 Follow the goal-based / builder-validator pattern. Draft, then have a FRESH critic judge it, then revise.
 
 1. **Draft v1** against the structure above.
-2. **Adversarial critic pass.** Spawn a `general-purpose` subagent that never saw your drafting (fresh context =
-   honest judgment). Its prompt:
-   > You are a skeptical Head of Product reviewing a weekly performance report. Score it against these 8
-   > dimensions (1-6 are CRITICAL): {paste the standard table}. For EACH dimension return PASS/FAIL + the
-   > specific gap. Independently spot-check 2-3 external claims for a real source; flag any number that looks
-   > internally inconsistent. Then independently verify every external/market claim against a PRIMARY source
-   > (official data, exchange, regulator — not a blog). Return: per-dimension verdict, the single weakest thing,
-   > and a corrected fact for anything that failed sourcing. Be hard to please. Under 400 words.
+2. **Adversarial critic pass.** Spawn the **`deliverable-critic`** agent (fresh context = honest judgment).
+   Give it the draft and this skill's standard table (the 8 dimensions, 1–6 CRITICAL, plus the bilingual/
+   template rows). It scores each dimension PASS/FAIL with the specific gap, independently verifies every
+   external/market claim against a PRIMARY source, and returns the single weakest thing + a corrected fact
+   for anything that failed sourcing. (If several market claims need checking, also fan out `citation-verifier`.)
 3. **Revise → v2** addressing every FAILED critical dimension and every sourcing correction. Do not argue with
    the critic; fix the gap.
 4. **Repeat** (critic → revise) until all critical dimensions PASS, **max 4 iterations**.

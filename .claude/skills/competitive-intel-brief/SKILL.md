@@ -14,6 +14,9 @@ Before researching, write the precise question in one line. Use the question-bui
 Vague question → vague brief. If the requester's ask is broad, narrow it and state the narrowing.
 
 ## Step 2 — Primary-source-first verification (hard rule)
+To pull a competitor's own figures, delegate to the **`competitor-analyst`** agent (one named entity
+per call — it obeys the primary-source rule and keeps research noise out of this chat). Then hold every
+figure it returns to the rule below.
 - A claim about an entity must come from **that entity's own** primary source: official domain
   (e.g. binance.com, academy.binance.com), regulatory filing (ADGM/FSRA, FCA, SEC), or the
   entity's published T&C / product pages.
@@ -53,17 +56,12 @@ source alone. This is where prior "accuracy fell short" feedback gets caught bef
 
 1. **Select the claims to check.** Every material `Confirmed` claim, plus any `Inferred` claim the
    brief leans on for a roadmap recommendation. Group related claims into ~4–6 clusters.
-2. **Fan out `general-purpose` subagents in a single message** (one per cluster, so they run in
-   parallel and their research noise stays out of this chat). Each agent prompt:
-
-   > Independently verify a competitive-intelligence claim against the SUBJECT ENTITY's own primary
-   > source. Be skeptical; a third party's page is never evidence about another entity (a Bitget
-   > article is not evidence about Binance). CLAIM: {claim + figure + the entity it concerns}. Find
-   > the entity's official domain / regulatory filing (ADGM-FSRA, FCA, SEC) / published T&C or
-   > product page. Confirm or correct: exact figure/spread/leverage/fee/instrument coverage, and the
-   > as-of date. Return VERDICT = CONFIRMED / PARTIALLY CONFIRMED (list corrections) / UNVERIFIED
-   > (no primary source found) / FALSE, then the corrected one-line claim, then the primary URL.
-   > Under 250 words. Do not cite aggregators, blogs, or forums as proof.
+2. **Fan out the `citation-verifier` agent in a single message** (one per cluster, so they run in
+   parallel and their research noise stays out of this chat). It is a fresh, skeptical fact-checker
+   that never saw your reasoning and judges each claim on the source alone. Pass each call the CLAIM
+   (figure + the entity it concerns); it returns VERDICT = CONFIRMED / PARTIALLY CONFIRMED / UNVERIFIED
+   / FALSE, the corrected one-line claim, and the primary URL. (If you must run it inline instead,
+   the agent's own instructions carry the full verification prompt.)
 
 3. **Apply the verdicts back into the tiers:**
    - `PARTIALLY CONFIRMED` → correct the figure/date in place; keep `Confirmed`, note the correction.
