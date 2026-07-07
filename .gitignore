@@ -1,0 +1,18 @@
+# Vault: internal Vantage knowledge (projects, decisions, competitive intel, people) — local only
+vault/
+
+# Inbox: raw drop zone (transcripts, reports, notes) — working/staging area, not for git
+inbox/
+
+# Internal knowledge base and raw reporting inputs — not for git
+.claude/knowledge-dump/
+.claude/reporting/
+
+# Source recordings — never committed, deleted after transcript is confirmed good
+*.wav
+*.m4a
+*.mp3
+*.mp4
+
+# Local Whisper model downloads
+scripts/transcribe/models/

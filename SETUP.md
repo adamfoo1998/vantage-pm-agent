@@ -7,23 +7,70 @@ only when needed.
 ## What's in here
 ```
 vantage-pm-agent/
-├── AGENTS.md                         # loads every turn — keep it lean
+├── AGENTS.md                         # loads every turn — keep it lean (9/10 line budget used)
 ├── SETUP.md                          # this file
+├── STATUS.md                         # live snapshot — active projects, action items, blockers
+├── vault/                            # second brain (Obsidian-compatible) — see below
+├── inbox/                            # drop zone routed by /standup — see below
+├── scripts/transcribe/               # local Whisper transcription (Phase 5)
 └── .claude/
+    ├── commands/
+    │   ├── standup.md                # morning routine
+    │   └── eod.md                    # end-of-day wrap
+    ├── agents/
+    │   ├── librarian.md              # haiku — files deliverables, maintains vault/INDEX.md + STATUS.md
+    │   ├── pm-researcher.md          # general web research delegate
+    │   ├── competitor-analyst.md     # one named competitor, primary-source-first
+    │   ├── citation-verifier.md      # opus — verify one claim vs its primary source
+    │   ├── deliverable-critic.md     # opus — scores a draft against pm-quality-gate
+    │   └── doc-drafter.md            # haiku — format/write from material already in hand
     └── skills/
         ├── competitive-intel-brief/SKILL.md
         ├── prd-authoring/SKILL.md
         ├── meeting-synthesis/SKILL.md
-        └── hop-brief/SKILL.md
+        ├── hop-brief/SKILL.md
+        ├── sop-builder/SKILL.md
+        ├── weekly-report/SKILL.md
+        ├── pm-quality-gate/SKILL.md
+        ├── storm-research/SKILL.md
+        ├── market-briefing/SKILL.md          # Phase 3
+        ├── report-from-images/SKILL.md       # Phase 4
+        ├── ops-check-runbook/SKILL.md        # Phase 6
+        └── launch-conductor/SKILL.md         # Phase 7
 ```
+
+### `vault/` — second brain
+Obsidian-compatible notes with enforced YAML frontmatter (`type`, `project`, `status`,
+`confidence`, `owner`, dates, `tags`). `vault/INDEX.md` is the always-cheap map — one line per
+note, read that first. Subfolders: `projects/` (MOCs), `decisions/`, `sops/` (incl.
+`sops/runbooks/`), `people/`, `competitive/`, `daily/` (briefings), `meetings/`. `librarian`
+(haiku, no web) files everything here and keeps `INDEX.md` + root `STATUS.md` current — never
+erases confidence tiers or `VERIFY` flags.
+
+### `inbox/` — routing drop zone
+`transcripts/`, `reports/`, `notes/`, each with an `_about.md` naming which skill consumes it.
+`/standup` lists anything sitting here unprocessed and proposes routing.
+
+### `scripts/transcribe/` — local transcription
+`transcribe.py` (faster-whisper) + `transcribe.ps1` (drag-and-drop wrapper) turn a recording into
+`inbox/transcripts/YYYY-MM-DD-<meeting-name>.md`. Fully local — see `scripts/transcribe/setup.md`
+for install + the privacy rules (audio/transcripts git-ignored, source audio deleted once the
+transcript is confirmed good).
+
+## Daily flow
+Record or drop today's inputs (a meeting recording onto `transcribe.ps1`, a report screenshot
+into `inbox/reports/`, raw notes into `inbox/notes/`) → run **`/standup`** to triage the inbox,
+get the morning market briefing, and see what STATUS.md is surfacing → do the day's work through
+whichever skill applies → run **`/eod`** to file the day's deliverables via `librarian`, refresh
+STATUS.md, and see what rolled over to tomorrow.
 
 ## Install
 1. Copy `AGENTS.md` and the `.claude/` folder into the root of the repo/folder where you run
    Claude Code. (Project-level skills live in `.claude/skills/<name>/SKILL.md`. Confirm the path
    matches your Claude Code version; the convention is stable but verify with `/skills` or your
    docs.)
-2. Start Claude Code in that folder. Run `/skills` (or your version's equivalent) to confirm all
-   four skills are detected.
+2. Start Claude Code in that folder. Run `/skills` (or your version's equivalent) to confirm the
+   skills are detected.
 3. Ask the agent a question that should trigger a skill (e.g. "benchmark Bybit perps vs Binance
    for XAUUSD-style exposure") and confirm it reaches for `competitive-intel-brief`.
 
@@ -62,12 +109,13 @@ workflow, not a generic template.
 ---
 
 ## Scale deliberately (don't over-architect)
-Start with this single agent and these four skills. Only add sub-agents once the primary agent is
-reliable. Resist the urge to build a multi-agent system for fashion.
+The kit has grown past the original four skills (see the file tree above) through the v2 phased
+build — vault, inbox, command centre, market briefing, generalized reporting, transcription,
+ops-check runbooks, and launch conductor. Every new skill was piloted or is awaiting its first
+real pilot before being trusted (see the pilot-status table below) — don't add more surface area
+than you're actually running.
 
 ## Backlog — skills to grow next, experientially (not pre-written on purpose)
-- `sop-builder` — codify any repeated workflow into a step-by-step SOP (your job explicitly
-  requires maintaining SOPs; this is also the loop, productised).
 - `roadmap-prioritisation` — RICE/WSJF scoring for roadmap items (CFD/perp, equities).
 - `risk-policy-draft` — structured first-draft risk policy (e.g. pre-IPO perp), every line
   `VERIFY`-flagged for compliance review.
