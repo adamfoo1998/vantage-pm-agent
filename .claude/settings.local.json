@@ -20,7 +20,8 @@
       "Skill(artifact-design)",
       "Artifact",
       "Bash(git fetch *)",
-      "WebFetch(domain:www.cmegroup.com)"
+      "WebFetch(domain:www.cmegroup.com)",
+      "Bash(git ls-remote *)"
     ]
   }
 }
