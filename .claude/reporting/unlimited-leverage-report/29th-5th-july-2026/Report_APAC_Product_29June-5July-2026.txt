@@ -1,0 +1,207 @@
+=====================================================================
+Weekly Report — "APAC_Product溝通群" Group
+Week: 06.29 ~ 07.05, 2026
+=====================================================================
+
+@All 本周無限槓桿數據分享，謝謝!
+
+
+一、基礎數據分享
+
+【插入每周數據表格 — Photo1 (9th March–5th July 2026)】
+
+1. 3/9 至 7/5 無限槓桿上線以來，累計為公司帶來約 2,455K 的 Net Company PnL，99,226Mil
+   交易量，淨入金約 2,680K，淨帳戶內轉為 $1,001K。
+
+2. 上週公司 PNL +$481.3K，為近10週次高（僅低於6/1–6/7的$532.1K），金價本週因美元
+   走強及美國就業數據疲弱持續走弱（一度跌破$4,050），延續近兩週「黃金走弱、客戶多
+   頭受損」的型態[來源：Fortune, 6/29/2026金價報導]。其中20884988客戶（越南）單周
+   獲利$258.4K，佔本週公司PNL 53.7%，為6/17黃金崩跌週同一被Risk追蹤之帳戶再度出現
+   大額獲利，Risk將重新評估其曝險上限。
+
+3. Net PNL 國家占比方面，以印度為主要（50.47%），越南次之（40.79%，較上週35%提升，
+   與越南本週大額獲利客戶有關）
+
+4. 交易量國家占比方面，以印度為主要（53.91%），越南次之（38.98%），與上週大致持平
+
+5. 全量開放後，台灣（+748%）、泰國（+82%，較上週+407%趨緩）、吉爾吉斯（+66%）交易
+   量成長明顯；蒙古、奈及利亞本週數據全歸零，需與DPI確認是否為真實流失或數據缺失
+
+
+【插入產品分佈表格 — Photo3 (9th March–5th July 2026)】
+【插入產品類型圓餅圖 — Photo2 (9th March–5th July 2026)】
+【插入 Top 5 / Bottom 5 客戶表格 — Photo4 (29th June–5th July 2026)】
+
+6. 黃金（XAUUSD）仍為客戶主要交易產品，占總交易量的 96.90%，並貢獻 87.38% 的 PnL。
+   PnL貢獻排名其次的產品為 XAGUSD 以及 BTCUSD
+
+7. 本週前五大盈利客戶合計貢獻約$430.1K，最大獲利客戶為20884988（越南），單周獲利
+   $258.4K（詳見上方）。其次為7311585（香港）+$75.2K，上週為最大虧損客戶
+   （-$37.5K），單週由虧轉盈擺動$112.7K，建議Risk覆核交易紀錄。最大虧損客戶為
+   26748596（印度，Retail），單周虧損-$145.0K，成交量達$762.9M但虧損比僅0.019%，
+   較接近IB/避險帳戶特徵，建議確認帳戶分類是否正確。Risk團隊均在追蹤中，暫未發現
+   異常交易。
+
+
+=====================================================================
+
+二、整體表現總攬 WOW 06.29~07.05 VS 06.22~06.28
+
+【插入整體 WoW 數據表格 — Photo5 (29th June–5th July 2026)】
+
+  • 交易量（Million Volume）：🟢 +2.60%
+  • 入金（Deposit）：       🔴 -11.07%
+  • 淨入金（Net Deposit）：  🔴 -42.77%
+  • Net Company PnL：       🟢 +230.66%
+
+（交易量僅微幅成長，入金與淨入金反而下滑，PNL成長主要來自客戶交易虧損而非入金
+成長；另附註Register Login WoW數據與Photo1原始週別計數方向不一致，需與DPI確認）
+
+
+=====================================================================
+
+三、區域表現
+
+交易量前五大區域表現
+
+【插入國家 WoW 數據表格 — Photo6 (29th June–5th July 2026)】
+
+1. 交易量成長
+
+  • India：     🟢 +5.22%
+  • Vietnam：   🔴 -25.61%
+  • Hong Kong： 🟢 +32.40%
+  • Malaysia：  🟢 +295.07%
+  • Indonesia： 🟢 +631.79%
+
+2. Net Company PNL 成長
+
+  • India：     🟢 +151.07%
+  • Vietnam：   🟢 +88.10%
+  • Hong Kong： 🟢 +273.66%
+  • Malaysia：  🟢 +10,448.69%  ← 上週基期極小，成長率僅供參考
+  • Indonesia： 🔴 -32.41%
+
+3. 兩大主力市場（印度、越南）本週量能平淡，成長主要來自香港/馬來西亞/印尼等
+   新興市場，抵消後使整體交易量WoW僅+2.60%
+
+
+=====================================================================
+
+四、待辦事項
+
+Risk 覆核 20884988 曝險集中度與 7311585 交易紀錄；確認 26748596 帳戶分類是否
+應改列IB/避險帳戶；與 DPI 核對 Register Login WoW 數據源不一致問題。
+
+
+=====================================================================
+END OF REPORT
+=====================================================================
+
+
+=====================================================================
+ENGLISH MIRROR
+=====================================================================
+
+Weekly Report — "APAC_Product溝通群" Group
+Week: Jun 29 – Jul 5, 2026
+
+@All — this week's Unlimited Leverage data, thanks!
+
+
+1. Base Data
+
+[Insert weekly data table — Photo1 (9 Mar–5 Jul 2026)]
+
+1. Since launch (3/9) through 7/5, cumulative Net Company PnL is approx.
+   $2,455K on 99,226M volume, with net deposits of ~$2,680K and net
+   internal transfers of $1,001K.
+
+2. Net Company PnL was +$481.3K last week — the second-highest of the past
+   10 weeks (behind only $532.1K for 6/1–6/7). Gold weakened through the
+   week on USD strength and a soft June US jobs report (briefly below
+   $4,050), continuing the last two weeks' pattern of weak gold hurting
+   client long positions [source: Fortune, gold price coverage 6/29/2026].
+   Account 20884988 (Vietnam) alone posted +$258.4K, 53.7% of this week's
+   company PnL — the same account Risk tracked during the 6/17 gold-crash
+   week, now posting a second large single-week gain; Risk will re-assess
+   its exposure limits.
+
+3. Net PnL by country: India leads (50.47%), Vietnam second (40.79%, up
+   from 35% last week, tied to this week's large Vietnam winner).
+
+4. Volume by country: India leads (53.91%), Vietnam second (38.98%),
+   roughly flat vs. last week.
+
+5. Post full-rollout, Taiwan (+748%), Thailand (+82%, decelerating from
+   +407% last week) and Kyrgyzstan (+66%) show clear volume growth; Mongolia
+   and Nigeria dropped to zero across the board this week — needs
+   confirming with DPI as genuine attrition vs. a data gap.
+
+
+[Insert product breakdown table — Photo3 (9 Mar–5 Jul 2026)]
+[Insert product-type pie chart — Photo2 (9 Mar–5 Jul 2026)]
+[Insert Top5/Bottom5 client table — Photo4 (29 Jun–5 Jul 2026)]
+
+6. Gold (XAUUSD) remains the dominant product at 96.90% of volume and
+   87.38% of PnL. Next by PnL contribution are XAGUSD and BTCUSD.
+
+7. This week's top-5 winners totaled ~$430.1K. Top winner 20884988
+   (Vietnam) +$258.4K (see above). #2 winner 7311585 (Hong Kong) +$75.2K —
+   last week's biggest loser (-$37.5K), a $112.7K swing; Risk should review
+   the trade log. Biggest loss: 26748596 (India, Retail) -$145.0K on
+   $762.9M volume, only a 0.019% loss ratio — looks more like an IB/hedge
+   account; classification should be confirmed. Risk is tracking both
+   groups with no anomalous trading found to date.
+
+
+2. Overall WoW 06.29–07.05 vs 06.22–06.28
+
+[Insert overall WoW table — Photo5 (29 Jun–5 Jul 2026)]
+
+  • Volume (Million):    🟢 +2.60%
+  • Deposit:              🔴 -11.07%
+  • Net Deposit:          🔴 -42.77%
+  • Net Company PnL:      🟢 +230.66%
+
+(Volume grew only marginally while deposits fell — this week's PnL growth
+came mainly from client trading losses, not new capital. Note: Register
+Login WoW disagrees in direction with the raw weekly count in Photo1;
+needs confirming with DPI.)
+
+
+3. Regional Performance
+
+Top-5 regions by volume
+
+[Insert country WoW table — Photo6 (29 Jun–5 Jul 2026)]
+
+1. Volume growth
+  • India:      🟢 +5.22%
+  • Vietnam:    🔴 -25.61%
+  • Hong Kong:  🟢 +32.40%
+  • Malaysia:   🟢 +295.07%
+  • Indonesia:  🟢 +631.79%
+
+2. Net Company PnL growth
+  • India:      🟢 +151.07%
+  • Vietnam:    🟢 +88.10%
+  • Hong Kong:  🟢 +273.66%
+  • Malaysia:   🟢 +10,448.69%  ← base was near-zero last week, for reference only
+  • Indonesia:  🔴 -32.41%
+
+3. The two anchor markets (India, Vietnam) were flat this week; growth came
+   from Hong Kong/Malaysia/Indonesia instead, netting to just +2.60% blended
+   volume growth.
+
+
+4. To Do
+
+Risk to review 20884988's exposure concentration and 7311585's trade log;
+confirm 26748596's account classification; reconcile the Register Login
+WoW data discrepancy with DPI.
+
+
+=====================================================================
+END OF REPORT
+=====================================================================

@@ -17,11 +17,25 @@
       "WebFetch(domain:claude.com)",
       "PowerShell(git add *)",
       "Skill(schedule)",
+      "Bash(python *)",
+      "Bash(python3 -c \"import uuid; print\\(uuid.uuid4\\(\\)\\)\")",
+      "Bash(powershell -Command \"[guid]::NewGuid\\(\\).ToString\\(\\)\")",
+      "PowerShell([guid]::NewGuid\\(\\).ToString\\(\\).ToLower\\(\\))",
+      "WebFetch(domain:apac.vantagehelpcenter.com)",
+      "PowerShell($pdf = \"C:\\\\Users\\\\kahken.foo\\\\Desktop\\\\vantage-pm-agent\\\\.claude\\\\knowledge-dump\\\\caleb-handoff\\\\Caleb Handover Documentation.pdf\"; $bytes = [System.IO.File]::ReadAllBytes\\($pdf\\); $text = [System.Text.Encoding]::Latin1.GetString\\($bytes\\); $readable = [regex]::Matches\\($text, '[\\\\x20-\\\\x7E\\\\r\\\\n]{10,}'\\) | ForEach-Object { $_.Value.Trim\\(\\) } | Where-Object { $_ -match '[a-zA-Z]{3,}' }; $readable -join \"`n\" | Select-Object -First 1)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(try { $pdfPath = 'C:\\\\Users\\\\kahken.foo\\\\Desktop\\\\vantage-pm-agent\\\\.claude\\\\knowledge-dump\\\\caleb-handoff\\\\Caleb Handover Documentation.pdf'; $bytes = [System.IO.File]::ReadAllBytes\\($pdfPath\\); $latin1 = [System.Text.Encoding]::GetEncoding\\(28591\\); $text = $latin1.GetString\\($bytes\\); $matches = [regex]::Matches\\($text, '[\\\\x20-\\\\x7E]{15,}'\\); $lines = @\\(\\); foreach \\($m in $matches\\) { $v = $m.Value.Trim\\(\\); if \\($v -match '[a-zA-Z]{3,}'\\) { $lines += $v } }; $lines[0..300] -join \"`n\" } catch { $_.Exception.Message })",
+      "PowerShell(pip install *)",
+      "PowerShell(\\(Get-Command winget -ErrorAction SilentlyContinue\\).Source; \\(Get-Command choco -ErrorAction SilentlyContinue\\).Source; \\(Get-Command scoop -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(scoop search *)",
+      "Bash(git status *)",
       "Skill(artifact-design)",
       "Artifact",
       "Bash(git fetch *)",
       "WebFetch(domain:www.cmegroup.com)",
-      "Bash(git ls-remote *)"
+      "Bash(git ls-remote *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }
