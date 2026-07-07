@@ -72,3 +72,15 @@ If a name in the notes is not on this list, keep it verbatim and flag it as `[UN
 - Writing `[team]` as the action owner when a named person was in the room.
 - Listing a discussion point as a decision.
 - Omitting a risk that was raised but not formally documented.
+
+## Routing rule for files from `inbox/transcripts/`
+When invoked on a transcript that came from `inbox/transcripts/` (e.g. produced by
+`scripts/transcribe/transcribe.py`), before writing the synthesis, ask Adam which downstream doc
+this meeting feeds:
+(a) notes only — just the standard output structure above;
+(b) a PRD section — chain to `prd-authoring` after synthesis;
+(c) an SOP capture — chain to `sop-builder` after synthesis;
+(d) a HoP brief — chain to `hop-brief` after synthesis.
+Match attendee names in the transcript against `vault/people/` to resolve `Speaker N` labels to
+real names where the voice/content makes it unambiguous. An unmatched speaker stays `Speaker N` —
+never guess an identity from context alone.

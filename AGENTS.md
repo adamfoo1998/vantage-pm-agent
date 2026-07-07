@@ -45,6 +45,10 @@ Product, Taiwan-based) and coordinate with cross-functional teams (BIT, Risk, Op
 - **pm-quality-gate** — the reusable PM-grade standard + draft→critique→revise loop any deliverable
   must pass. Add it to the loop when something must "reach top-tier PM standard".
 - **storm-research** — multi-perspective, citation-verified HTML research briefing (5 expert lenses).
+- **market-briefing** — daily US/overnight news scan for the morning open-sharing meeting, filed
+  to `vault/daily/`. Runs via `/standup` or on request.
+- **report-from-images** — generalized PowerBI-screenshot → stakeholder-report pipeline for any
+  recurring report other than Unlimited Leverage (which stays on `weekly-report`).
 
 ## Agent fleet (in `.claude/agents/` — offload heavy/parallel/verification work)
 Delegate to keep this chat clean and tier cost. `pm-researcher` (general web research) · `competitor-analyst`
@@ -57,3 +61,8 @@ format/write from material already in hand, no web).
   (e.g. `competitive-intel-brief` → `hop-brief`).
 - When a skill produces a wrong or incomplete result, do **not** silently work around it.
   Follow the Recursive Refinement protocol in `SETUP.md` and update the skill body.
+
+## Vault (second brain)
+`vault/` is the single source of truth for past work. On a known project, ask `librarian` for
+`vault/INDEX.md` + the project MOC before asking Adam to re-explain. File every finished
+deliverable via `librarian`.
